@@ -33,3 +33,45 @@ var request = developer(rootEndpoint, '/users');
 if (request) {
   return '/users';
 }
+
+/*
+ Create a user:
+  As Developer
+  when create a POST request at /users
+  then I will recieve a the user created.
+
+later we would like to create a bit more complete data model
+but for now let's keep stuff symple our user would just have one property: id, this
+property would just be the index of our Array of users**. So that first user would be { id: 0 }`
+*/
+
+function respond(POST, user)
+{
+  return POST, user;
+}
+
+var createUser = respond(request, user());
+
+if (createUser) {
+  return user();
+}
+/*
+Get user:
+  As Developer
+  when create a GET request at /user/:id
+  then I will recieve a the user.
+Keep stuff symple, this means that a GET request would return `{ id: 0 }**.
+Important
+The endpoint /users that we previously created should stay be working
+*/
+
+function getUser(get, id)
+{
+  return get, id;
+}
+
+var retrive = getUser(createUser, { id: 0 });
+
+if (getUser) {
+  return user`({ id: 0 })**`
+}

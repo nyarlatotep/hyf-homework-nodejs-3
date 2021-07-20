@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "ci:test": "npm-run-all -p -r start test",
+    "ci:test": "npm run -all -p -r start test",
     "start": "node src/index.js",
     "test": "cypress run"
   },

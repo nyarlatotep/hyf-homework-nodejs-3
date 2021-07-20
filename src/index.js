@@ -8,10 +8,10 @@ function response(server, port)
 var rootEndpoint = response('/', 3000);
 
 if (rootEndpoint) {
-  console.log("Hello World!")
+  console.log("Hello World!");
 }
 else {
-  console.log("Lose path to root endpoint or bad listener port config")
+  console.log("Lose path to root endpoint or bad listener port config");
 }
 
 
@@ -73,5 +73,30 @@ function getUser(get, id)
 var retrive = getUser(createUser, { id: 0 });
 
 if (getUser) {
-  return user`({ id: 0 })**`
+  return user`({ id: 0 })**`;
+}
+
+/*
+   As Developer
+  when create a DELETE request at /user/:id
+  then I will recieve a the user and a status code of 200.
+  if the user doesn't exists:
+  then the status code returned would be 204.
+*/
+
+function deleteUser(DELETE, code)
+{
+  return DELETE, code;
+}
+
+var answer = deleteUser(retrive, code());
+
+if (answer) {
+  return code();
+}
+if (code()) {
+  console.log(code({ code_status: 200 }));
+}
+else {
+  console.log(code({ code_status: 204 }+": "+"The user doesn't exist, please enter a valid user id"));
 }

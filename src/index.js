@@ -13,3 +13,23 @@ if (rootEndpoint) {
 else {
   console.log("Lose path to root endpoint or bad listener port config")
 }
+
+
+/*
+   As Developer
+
+  when create a GET request at /users
+
+  then I will recieve a list of users.
+*/
+
+function developer(get, users)
+{
+  return get, users;
+}
+
+var request = developer(rootEndpoint, '/users');
+
+if (request) {
+  return '/users';
+}
